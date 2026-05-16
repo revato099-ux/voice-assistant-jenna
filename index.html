@@ -240,7 +240,16 @@
             const apiKey = document.getElementById('apiKey').value;
             
             if (!apiKey) {
-                alert('OpenAI API key kiriting!');
+body: JSON.stringify({
+                        model: 'gpt-4',
+                        messages: [
+                            { role: 'system', content: 'Siz JENNA - o\'zbek tilida yordam beradigan AI. Qisqa va aniq javoblar bering.' },
+                            { role: 'user', content: userMessage }
+                        ],
+                        temperature: 0.7,
+                        max_tokens: 150
+                    })
+                });                alert('OpenAI API key kiriting!');
                 return null;
             }
 
@@ -252,7 +261,7 @@
                         'Authorization': `Bearer ${apiKey}`
                     },
                     body: JSON.stringify({
-                        model: 'gpt-3.5-turbo',
+                        model: 'gpt-4',
                         messages: [
                             { role: 'system', content: 'Siz JENNA - o\'zbek tilida yordam beradigan AI. Qisqa va aniq javoblar bering.' },
                             { role: 'user', content: userMessage }
