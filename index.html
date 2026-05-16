@@ -239,17 +239,15 @@
         async function getChatGPTResponse(userMessage) {
             const apiKey = document.getElementById('apiKey').value;
             
-            if (!apiKey) {
-body: JSON.stringify({
-                        model: 'gpt-4',
-                        messages: [
-                            { role: 'system', content: 'Siz JENNA - o\'zbek tilida yordam beradigan AI. Qisqa va aniq javoblar bering.' },
-                            { role: 'user', content: userMessage }
-                        ],
-                        temperature: 0.7,
-                        max_tokens: 150
-                    })
-                });                alert('OpenAI API key kiriting!');
+          
+                        
+                       
+                            
+                        
+                        
+                        
+                    
+                              alert('OpenAI API key kiriting!');
                 return null;
             }
 
